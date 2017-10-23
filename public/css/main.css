@@ -9,3 +9,12 @@
 .bg-dark {
 	background-color: #000!important;
 }
+
+#theme-div {
+	background: url(../images/main-building.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: calc(100vh);
+}
