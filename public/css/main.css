@@ -1,0 +1,11 @@
+.media-icons {
+	padding: 8px;
+}
+
+.media-icons .fa {
+	font-size: 20px
+}
+
+.bg-dark {
+	background-color: #000!important;
+}
