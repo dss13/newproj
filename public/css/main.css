@@ -18,3 +18,8 @@
 	background-size: cover;
 	height: calc(100vh);
 }
+
+.para-tab {
+	color: #888;
+	text-align: left;
+}
