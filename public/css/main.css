@@ -17,9 +17,69 @@
 	-o-background-size: cover;
 	background-size: cover;
 	height: calc(100vh);
+	position: relative;
 }
 
 .para-tab {
 	color: #888;
 	text-align: left;
+}
+.nav-link {
+	color: #555 !important;
+}
+
+.nav-link.active {
+	color: rgb(230, 43, 30) !important;
+}
+
+.people-say {
+	padding: 100px 20px;
+}
+
+.people-say p {
+	text-align: center;
+	color: #999;
+}
+
+.people-say div {
+	color: #999;
+	font-weight: 500;
+	text-align: right;
+	padding-right: 40px;
+}
+
+.red {
+	color: rgb(230,43,30);
+}
+
+.no-pad {
+	padding: 0!important;
+}
+
+#comments {
+	padding: 30px 30px;
+	background: rgba(0,0,0,0.03);
+}
+
+#timer {
+	display: flex;
+	position: absolute;
+	bottom: 30px;
+}
+
+#timer div {
+	flex-grow: 1;
+	text-align: center;
+	border-right: 2px solid rgba(255, 255, 255, 0.7);
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 1.2rem;
+}
+
+.time-units p:first-child {
+	font-size: 1.8rem;
+	margin: 0;
+}
+
+#timer div:last-child {
+	border:0;
 }
