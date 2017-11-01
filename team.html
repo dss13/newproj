@@ -6,10 +6,9 @@
     <link rel="stylesheet" type="text/css" href="external/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="external/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="public/css/main.css">
-            <link rel="stylesheet" type="text/css" href="public/css/team.css">
-
+    <link rel="stylesheet" type="text/css" href="public/css/team.css">
 </head>
-<body>
+<body ng-app="app">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#"><img height="30" src="public/images/logo.jpg" alt="" title="TEDxIITKharagpur"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,144 +55,70 @@
             </ul>
         </div>
     </nav>
-    <div class="container" style="padding-top:5em; " >
+    <div class="container" style="padding-top:5em; " ng-controller="teamController">
+        <h1>The Curator</h1>
         <div class="row">
-            <div class="col-md-3 col-sm-12" >
+            <div class="col-sm-12 col-md-3 col-md-offset-9">
                 <div class="our-team">
                     <div class="pic">
-                        <img src="public/images/sumugan.jpg">
+                        <img src="/public/images/team/himesh.jpg">
                     </div>
                     <div class="team-content">
-                        <h3 class="title">Sumugan Swaroop</h3>
-                        <span class="post">Web Team Head</span>
+                        <h3 class="title">Himesh Kothari</h3>
+                        <span class="post">Curator</span>
                         <ul class="social">
-                            <li><a href="https://www.facebook.com/i.am.spidermannn" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-12">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="images/img-2.jpg">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Mr. Y</h3>
-                        <span class="post">Core Team Member</span>
-                        <ul class="social">
-                            <li><a href="https://www.facebook.com/sharayu.dhoke" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-             <div class="col-md-3 col-sm-12">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="images/img-2.jpg">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Mr. Z</h3>
-                        <span class="post">Core Team Member</span>
-                        <ul class="social">
-                            <li><a href="https://www.facebook.com/sharayu.dhoke" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-             <div class="col-md-3 col-sm-12">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="images/img-2.jpg">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Mr. W</h3>
-                        <span class="post">Core Team Member</span>
-                        <ul class="social">
-                            <li><a href="https://www.facebook.com/sharayu.dhoke" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                            <li><a href="https://www.facebook.com/himesh.kothari1" target="_blank" class="fa fa-facebook"></a></li>
+                            <li><a href="https://www.linkedin.com/in/himeshkothari/" target="_blank" class="fa fa-linkedin"></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <h1>The Core Team</h1>
         <div class="row">
-            <div class="col-md-3 col-sm-12" >
+            <div class="col-md-3 col-sm-12" ng-repeat="m in team">
                 <div class="our-team">
                     <div class="pic">
-                        <img src="images/img-1.jpg">
+                        <img src="{{m.image}}">
                     </div>
                     <div class="team-content">
-                        <h3 class="title">Mr. X</h3>
-                        <span class="post">Core Team Member</span>
+                        <h3 class="title">{{m.name}}</h3>
+                        <span class="post">{{m.des || ""}}</span>
                         <ul class="social">
-                            <li><a href="https://www.facebook.com/i.am.spidermannn" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                            <li><a href="{{m.fb}}" target="_blank" class="fa fa-facebook"></a></li>
+                            <li><a href="{{m.linkedin}}" target="_blank" class="fa fa-linkedin"></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
+        </div>
+        <h1>The Web and Design Team</h1>
+        <div class="row">
             <div class="col-md-3 col-sm-12">
                 <div class="our-team">
                     <div class="pic">
-                        <img src="images/img-2.jpg">
+                        <img src="/public/images/team/sumugan.jpg">
                     </div>
                     <div class="team-content">
-                        <h3 class="title">Mr. Y</h3>
-                        <span class="post">Core Team Member</span>
+                        <h3 class="title">Sumugan Swaroop</h3>
+                        <span class="post">Web Developer</span>
                         <ul class="social">
-                            <li><a href="https://www.facebook.com/sharayu.dhoke" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                            <li><a href="https://www.facebook.com/sumugan.swaroop.7" target="_blank" class="fa fa-facebook"></a></li>
+                            <li><a href="https://www.linkedin.com/in/sumugan-swaroop-765769109/" target="_blank" class="fa fa-linkedin"></a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-             <div class="col-md-3 col-sm-12">
+            </div><div class="col-md-3 col-sm-12">
                 <div class="our-team">
                     <div class="pic">
-                        <img src="images/img-2.jpg">
+                        <img src="/public/images/team/samya.jpg">
                     </div>
                     <div class="team-content">
-                        <h3 class="title">Mr. Z</h3>
-                        <span class="post">Core Team Member</span>
+                        <h3 class="title">Samya Samanta</h3>
+                        <span class="post">Creative Head</span>
                         <ul class="social">
-                            <li><a href="https://www.facebook.com/sharayu.dhoke" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-             <div class="col-md-3 col-sm-12">
-                <div class="our-team">
-                    <div class="pic">
-                        <img src="images/img-2.jpg">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="title">Mr. W</h3>
-                        <span class="post">Core Team Member</span>
-                        <ul class="social">
-                            <li><a href="https://www.facebook.com/sharayu.dhoke" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                            <li><a href="https://www.facebook.com/samya.pequena" target="_blank" class="fa fa-facebook"></a></li>
+                            <li><a href="https://www.linkedin.com/in/samya-samanta-8779a0109/" target="_blank" class="fa fa-linkedin"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -203,6 +128,7 @@
     <script type="text/javascript" src="external/js/jquery.min.js"></script>
     <script type="text/javascript" src="external/js/popper.min.js"></script>
     <script type="text/javascript" src="external/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="external/js/angular.min.js"></script>
     <script type="text/javascript" src="public/js/index.js"></script>
 </body>
 </html>

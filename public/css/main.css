@@ -16,7 +16,7 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height: calc(100vh);
+	height: calc(100vh - 60px);
 	position: relative;
 }
 
@@ -28,7 +28,7 @@
 	color: #555 !important;
 }
 
-.nav-link.active {
+.nav-tabs .nav-link.active {
 	color: rgb(230, 43, 30) !important;
 }
 
