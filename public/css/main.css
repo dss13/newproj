@@ -83,3 +83,98 @@
 #timer div:last-child {
 	border:0;
 }
+
+#footer {
+	padding: 30px 20px;
+	background-color: #333;
+}
+
+#footer a {
+	color: #fef;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+#footer a:hover {
+	color: rgb(230, 43, 30);
+}
+
+#footer a .fa {
+	font-size: 18px;
+	margin-right: 12px;
+}
+
+#footer h4, h6 {
+	color: #777;
+}
+
+#footer span {
+	color: #eee;
+}
+
+.speakerDiv {
+	padding: 30px 20px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.speakerDiv:hover .speaker_image img {
+	filter: grayscale(0);
+}
+
+.speakerDiv:hover .sname {
+	color: rgb(230, 43, 30);
+}
+
+.speakcon {
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px grey;
+	transition: all 0.2s ease;
+}
+
+.speakcon:hover {
+	box-shadow: 0 4px 32px grey;
+}
+
+.speakcon:hover .speaker_image img {
+	transform: scale(1.2);
+}
+
+.speaker_image img {
+	filter: grayscale(1);
+	transition: all 0.3s ease;
+}
+
+.speaker_cap {
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+.speakerDiv .modal-body {
+	padding: 45px 30px;
+}
+
+.speakerDiv .modal-body p {
+	color: #555;
+}
+
+.speakerDiv .modal-body {
+	background: #eee;
+	border-bottom: 3px solid rgb(230, 43,30);
+}
+
+.sname {
+	font-size: 20px;
+	color: #333;
+}
+
+.stag {
+	color: #888;
+}
+
+.modal-dialog {
+	max-width: 70vw;
+}
