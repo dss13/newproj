@@ -57,6 +57,12 @@
 
     <div class="container-fluid">
         <div class="row" id="theme-div">
+            <div class="col-sm-12">
+
+            </div>
+            <div class="col-sm-12 text-center">
+                <span class="banTitle"><span class="boldspan">TED<sup>x</sup></span> IITKharagpur</span>
+            </div>
             <div id="timer" class="col-sm-12">
                 <div class="time-units">
                     <p id="days">00</p>
@@ -143,7 +149,7 @@
             </div>
         </div>
         <div id="speakers">
-            <h3>Speakers</h3>
+            <h1>Speakers</h1>
             <div class="row" ng-app="app" ng-controller="speakersController">
                 <div data-toggle="modal" data-target="#speakMod{{$index}}" class="col-sm-12 speakerDiv col-md-3" ng-repeat="m in speakers | orderBy:'name'">
                     <div class="speakcon">
@@ -153,6 +159,9 @@
                         <div class="speaker_cap">
                             <span class="sname">{{m.name}}</span><br>
                             <span class="stag">{{m.short}}</span>
+                        </div>
+                        <div class="overlayspea">
+                            <h3>{{m.name.split(' ')[0]}}</h3>
                         </div>
                     </div>
                     <div id="speakMod{{$index}}" class="modal fade" role="dialog">
@@ -174,6 +183,26 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="getInvolved">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="sym"><i class="fa fa-question"></i></div>
+                    <div class="symdes"></div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="sym"><i class="fa fa-wpforms"></i></div>
+                    <div class="symdes"></div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="sym"><i class="fa fa-user-plus"></i></div>
+                    <div class="symdes"></div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="sym"><i class="fa fa-question"></i></div>
+                    <div class="symdes"></div>
                 </div>
             </div>
         </div>
