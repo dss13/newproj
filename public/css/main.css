@@ -94,6 +94,8 @@
 
 #footer a:hover {
 	color: rgb(230, 43, 30);
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
 
 #footer a .fa {
