@@ -316,6 +316,14 @@ body {
 	.banTitle {
 		font-size: 1.5rem;
 	}
+
+	.speakerDes {
+		display: none;
+	}
+
+	.modal-dialog {
+		max-width: 95vw;
+	}
 }
 
 /*
