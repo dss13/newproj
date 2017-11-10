@@ -3,7 +3,7 @@
 }
 
 .media-icons .fa {
-	font-size: 20px
+	font-size: 1.5rem
 }
 
 #themeDiv {
@@ -293,6 +293,14 @@ body {
 
 .topNav .scrollable, .topNav .media-icons .fa {
 	color: #ddd !important;
+}
+
+.scrollable {
+	text-decoration: none;
+}
+
+.scrollable:hover {
+	text-decoration: none;
 }
 
 #themeOverlay {

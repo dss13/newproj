@@ -415,3 +415,10 @@ img {
             transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, -225, 0, 1);
   }
 }
+
+@media screen and (max-width: 480px) {
+    .gallery figure {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
+}
