@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="public/css/main.css">
 </head>
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark topNav">
         <a class="navbar-brand" href="#"><img height="30" src="public/images/logo.jpg" alt="" title="TEDxIITKharagpur"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="collapseNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link scrollable" href="#theme-div">Home</a>
+                    <a class="nav-link scrollable" href="#themeDiv">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link scrollable" href="#about">About</a>
@@ -32,7 +32,7 @@
                     <a class="nav-link scrollable" href="team.html">Team</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link scrollable" href="#">Get Involved</a>
+                    <a class="nav-link scrollable" href="#getInvolved">Get Involved</a>
                 </li>
             </ul>
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
@@ -53,10 +53,13 @@
                 </li>
         	</ul>
         </div>
-    </nav>
+    </div>
 
     <div class="container-fluid">
-        <div class="row" id="theme-div">
+        <div class="row" id="themeDiv">
+            <div id="themeOverlay">
+
+            </div>
             <div class="col-sm-12">
 
             </div>
@@ -101,15 +104,15 @@
                     <div class="tab-content">
                         <div id="ted" class="tab-pane fade in active show">
                         <!-- <h4 class="card-title">TED</h4> -->
-                            <p class="para-tab">TED is a global non-profit organization to uphold the spirit of `Ideas Worth Spreading`. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes. Their talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Isabel Allende and former UK Prime Minister Gordon Brown.</p>
+                            <p class="para-tab sizePara">TED is a global non-profit organization to uphold the spirit of `Ideas Worth Spreading`. Started as a four-day conference in California 25 years ago, TED has grown to support those world-changing ideas with multiple initiatives. The annual TED Conference invites the world's leading thinkers and doers to speak for 18 minutes. Their talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Al Gore, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Isabel Allende and former UK Prime Minister Gordon Brown.</p>
                         </div>
                         <div id="tedx" class="tab-pane fade">
                         <!-- <h4 class="card-title">TEDx</h4> -->
-                            <p class="para-tab">TEDx is an independently organized TED event which helps communities enjoy a TED like experience, through live speakers and videos of TED talks. Extensively conducted by leading universities and organizations, TEDx events have seen incredible growth across the globe. A TEDx event aims to make great ideas accessible and spark conversation among the members of the audience. Idea-centric, crisp, 18-minute deliverances by eminent personalities from diverse fields inspire and educate alike. The breaks provide ample time to strike up conversations with other enthusiasts, paving the way for interesting discussions and varied perspectives.</p>
+                            <p class="para-tab sizePara">TEDx is an independently organized TED event which helps communities enjoy a TED like experience, through live speakers and videos of TED talks. Extensively conducted by leading universities and organizations, TEDx events have seen incredible growth across the globe. A TEDx event aims to make great ideas accessible and spark conversation among the members of the audience. Idea-centric, crisp, 18-minute deliverances by eminent personalities from diverse fields inspire and educate alike. The breaks provide ample time to strike up conversations with other enthusiasts, paving the way for interesting discussions and varied perspectives.</p>
                         </div>
                         <div id="tedxiitkgp" class="tab-pane fade">
                         <!-- <h4 class="card-title">TEDxIITKharagpur</h4> -->
-                            <p class="para-tab">Involving a wide array of highly successful visionaries, TEDxIITKharagpur event intends to foster and nurture the seeds of innovation, vision and creativity within the budding entrepreneurs. The theme of first edition of TEDx was "Ignite changes" followed by "Unturned pages" and this year it was "Prism of possibilities". Talks were followed by networking sessions wherein interested audience interacted with speakers and gained insight about the inertia, frictions and enthusiasm of the ideas.</p>
+                            <p class="para-tab sizePara">Involving a wide array of highly successful visionaries, TEDxIITKharagpur event intends to foster and nurture the seeds of innovation, vision and creativity within the budding entrepreneurs. The theme of first edition of TEDx was "Ignite changes" followed by "Unturned pages" and this year it was "Prism of possibilities". Talks were followed by networking sessions wherein interested audience interacted with speakers and gained insight about the inertia, frictions and enthusiasm of the ideas.</p>
                         </div>
                     </div>
                 </div>
@@ -149,7 +152,9 @@
             </div>
         </div>
         <div id="speakers">
-            <h1>Speakers</h1>
+            <div class="text-center">
+                <h1>Speakers</h1>
+            </div>
             <div class="row" ng-app="app" ng-controller="speakersController">
                 <div data-toggle="modal" data-target="#speakMod{{$index}}" class="col-sm-12 speakerDiv col-md-3" ng-repeat="m in speakers | orderBy:'name'">
                     <div class="speakcon">
@@ -168,6 +173,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body">
+                                    <!-- <div class="blurBack" style="background-image: url(public/images/speakers/{{m.image}})"></div> -->
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <div class="row">
                                         <div class="col-sm-12 col-md-6">
@@ -187,22 +193,65 @@
             </div>
         </div>
         <div id="getInvolved">
+            <div class="text-center">
+                <h1>Becoming a Speaker</h1>
+                <!-- <h1>Get Involved</h1> -->
+            </div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-md-3 col-sm-12 text-center">
                     <div class="sym"><i class="fa fa-question"></i></div>
-                    <div class="symdes"></div>
+                    <div class="symdes">
+                        <h4>Learn</h4>
+                        <p>Do your research by reading literally everything on this web page.</p>
+                    </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-md-3 col-sm-12 text-center">
                     <div class="sym"><i class="fa fa-wpforms"></i></div>
-                    <div class="symdes"></div>
+                    <div class="symdes">
+                        <h4>Apply</h4>
+                        <p>Fill out an application.</p>
+                    </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-md-3 col-sm-12 text-center">
                     <div class="sym"><i class="fa fa-user-plus"></i></div>
-                    <div class="symdes"></div>
+                    <div class="symdes">
+                        <h4>Review & Selection</h4>
+                        <p>Our speaker selection committee will review your proposal and contact you.</p>
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="sym"><i class="fa fa-question"></i></div>
-                    <div class="symdes"></div>
+                <div class="col-md-3 col-sm-12 text-center">
+                    <div class="sym"><i class="fa fa-street-view"></i></div>
+                    <div class="symdes">
+                        <h4>Curation</h4>
+                        <p>If selected, we'll help you perfect your presentation for a TEDx audience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <h1>Reasons to Partner with Us</h1>
+                <!-- <h1>Get Involved</h1> -->
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 text-center">
+                    <div class="sym"><i class="fa fa-link"></i></div>
+                    <div class="symdes">
+                        <h4>Brand Linking</h4>
+                        <p>Associate with a powerful worldwide brand and movement synonymous with creativity, collaboration, and innovation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <div class="sym"><i class="fa fa-line-chart"></i></div>
+                    <div class="symdes">
+                        <h4>Lead Generation</h4>
+                        <p>Gain highly qualified leads from tuned-in intellectuals across a variety of industries, including education, healthcare, and technology.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <div class="sym"><i class="fa fa-bolt"></i></div>
+                    <div class="symdes">
+                        <h4>Unconventional</h4>
+                        <p>Access unconventional showcase opportunities unique to our conference, creating genuine experiences that drive higher engagement.</p>
+                    </div>
                 </div>
             </div>
         </div>
