@@ -216,7 +216,7 @@ body {
 	color: rgba(255,255,255,0.7);
 	border: 6px solid rgba(255,255,255,0.8);
 	/*border-bottom: 6px solid rgba(255,255,255,0.8);*/
-	padding: 10px;
+	padding: 10px 40px;
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
@@ -292,13 +292,16 @@ body {
 }
 
 .topNav .scrollable, .topNav .media-icons .fa {
-	color: #ddd !important;
+	color: #ddd;
 }
 
 .scrollable {
 	text-decoration: none;
 }
 
+.nav-link {
+	font-weight: 900;
+}
 .scrollable:hover {
 	text-decoration: none;
 }
@@ -320,9 +323,47 @@ body {
 	background-color: #000!important;
 }
 
+.whitefont {
+	color: #eee;
+}
+
+#partin {
+	margin: 0;
+	padding: 70px 40px 50px 40px;
+}
+
+.dateSpan {
+	font-size: 1.8rem;
+	border: 5px solid rgba(255,255,255,0.7);
+	padding: 5px 20px;
+	color: rgba(255,255,255,0.7);
+}
+
+#spekin {
+	background: url(../images/gallery/1.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	margin: 0;
+	padding: 50px 40px;
+	background-size: cover;
+}
+
+.media-icons:hover .nav-link .fa {
+	color: rgb(230,43,30);
+}
+
 @media screen and (max-width: 480px) {
 	.banTitle {
 		font-size: 1.5rem;
+		padding: 3px 12px;
+		border-width: 5px;
+	}
+
+	.dateSpan {
+		font-size: 0.8rem;
+		padding: 2px 8px;
+		border-width: 3px;
 	}
 
 	.speakerDes {

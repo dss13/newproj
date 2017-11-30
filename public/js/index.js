@@ -1,4 +1,4 @@
-var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime()
+var countDownDate = new Date("Mar 10, 2018 16:00:00").getTime()
 
 var x = setInterval(function() {
     var now = new Date().getTime()
@@ -36,14 +36,13 @@ $(document).ready(function(){
   // Add smooth scrolling to all links
     $(".scrollable").on('click', function(event) {
         if (this.hash !== "") {
-            event.preventDefault()
+            // event.preventDefault()
             var hash = this.hash;
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 800, function(){
                 window.location.hash = hash;
             });
-            $('.navbar-toggler').trigger('click')
         }
   });
 });
