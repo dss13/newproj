@@ -59,7 +59,6 @@ function hashUp() {
 }
 
 window.onscroll = function() {
-    var themeH = (document.getElementById('themeDiv').clientHeight - 30) || 0
     if (window.pageYOffset > 150) {
         $('.navbar').removeClass('topNav')
         $('.navbar').addClass('downNav')
